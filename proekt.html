@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Font awesome icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <script src="jskript.js"></script>
     <link rel="stylesheet" href="proekt.css">
   </head>
   <body>
@@ -36,6 +37,9 @@
             <input type = "text" class = "search-input" placeholder="find your food . . .">
             <button type = "submit" class = "search-btn">
               <i class = "fas fa-search"></i>
+              
+                </div>
+             </form>
             </button>
           </form>
         </div>
@@ -55,7 +59,7 @@
           <div class = "design-item">
             <div class = "design-img">
               <img src = "home1.jpg" alt = "">
-              <span><i class = "far fa-heart"></i> 22</span>
+              <span onclick="Like(1)"><i class = "far fa-heart"></i> <strong id="like1">0</strong></span>
               <span>Art & Design</span>
             </div>
             <div class = "design-title">
@@ -67,7 +71,7 @@
           <div class = "design-item">
             <div class = "design-img">
               <img src = "home2.jpg" alt = "">
-              <span><i class = "far fa-heart"></i> 22</span>
+              <span onclick="Like(2)"><i class = "far fa-heart"></i> <strong id="like2">0</strong></span>
               <span>Art & Design</span>
             </div>
             <div class = "design-title">
@@ -79,7 +83,7 @@
           <div class = "design-item">
             <div class = "design-img">
               <img src = "home3.jpg" alt = "">
-              <span><i class = "far fa-heart"></i> 22</span>
+              <span onclick="Like(3)"><i class = "far fa-heart"></i> <strong id="like3">0</strong></span>
               <span>Art & Design</span>
             </div>
             <div class = "design-title">
@@ -91,7 +95,7 @@
           <div class = "design-item">
             <div class = "design-img">
               <img src = "rm351-hein-blogbanner-082.jpg" alt = "">
-              <span><i class = "far fa-heart"></i> 22</span>
+              <span onclick="Like(12)"><i class = "far fa-heart"></i> <strong id="like12">0</strong></span>
               <span>Art & Design</span>
             </div>
             <div class = "design-title">
@@ -103,7 +107,7 @@
           <div class = "design-item">
             <div class = "design-img">
               <img src = "f6b4275cbe6bced3dcf7ea2688902fbf1.jpg" alt = "">
-              <span><i class = "far fa-heart"></i> 22</span>
+              <span onclick="Like(4)"><i class = "far fa-heart"></i> <strong id="like4">0</strong></span>
               <span>Art & Design</span>
             </div>
             <div class = "design-title">
@@ -115,7 +119,7 @@
           <div class = "design-item">
             <div class = "design-img">
               <img src = "Inspirational-Quotes-About-Trying-New-Things2.jpg" alt = "">
-              <span><i class = "far fa-heart"></i> 22</span>
+              <span onclick="Like(5)"><i class = "far fa-heart"></i> <strong id="like5">0</strong></span>
               <span>Art & Design</span>
             </div>
             <div class = "design-title">
@@ -141,7 +145,7 @@
           <div class = "blog-item">
             <div class = "blog-img">
               <img src = "food11.jpg" alt = "">
-              <span><i class = "far fa-heart"></i></span>
+              <span onclick="Like(6)"><i class = "far fa-heart"></i> <strong id="like6">0</strong></span>
             </div>
             <div class = "blog-text">
               <span>20 September, 2021</span>
@@ -149,12 +153,13 @@
               <p> Ingredients :
                 1-1/2 cups all purpose flour, spooned into measuring cup and leveled off.
                 2 tablespoons sugar.
-                2-1/2 teaspoons baking powder.
+                2-1/2 teaspoons baking powder.<span id="dots1"+br>...</span><span style="display : none" id="more1">
                 1 small, over-ripe banana, peeled (the browner, the better)
                 1 cup plus 2 tablespoons low fat milk.
                 1/2 teaspoon vanilla extract.
-                3 tablespoons unsalted butter, melted. </p>
-              <a href = "#">Read More</a>
+                3 tablespoons unsalted butter, melted. 
+                </span> </p>
+                <button onclick="myFunction(1)" id="myBtn1">Read more</button>
             </div>
           </div>
           <!-- end of item -->
@@ -162,20 +167,20 @@
           <div class = "blog-item">
             <div class = "blog-img">
               <img src = "food2.jpg" alt = "">
-              <span><i class = "far fa-heart"></i></span>
+              <span onclick="Like(7)"><i class = "far fa-heart"></i> <strong id="like7">0</strong></span>
             </div>
             <div class = "blog-text">
               <span>29 September, 2021</span>
               <h2>Smothie bowl</h2>
               <p>Ingredients : 
                 2 cup almond milk, unsweetened.
-                1 tablespoon vanilla protein powder.
+                1 tablespoon vanilla protein powder.<span id="dots2"+br>...</span><span style="display : none" id="more2">
                 1 cup raspberries.
                 1 medium banana.
                 1/8 cup almond butter.
                 1 cup Greek yogurt, plain.
-                1/8 cup honey.</p>
-              <a href = "#">Read More</a>
+                1/8 cup honey.</span></p>
+                <button onclick="myFunction(2)" id="myBtn2">Read more</button>
             </div>
           </div>
           <!-- end of item -->
@@ -183,21 +188,25 @@
           <div class = "blog-item">
             <div class = "blog-img">
               <img src = "food4.jpg" alt = "">
-              <span><i class = "far fa-heart"></i></span>
+              <span onclick="Like(11)"><i class = "far fa-heart"></i> <strong id="like11">0</strong></span>
             </div>
             <div class = "blog-text">
+              
+        
+              
               <span>02 October, 2021</span>
+              
               <h2>Lettuce tacos</h2>
               <p>Ingredients :
                 16 Boston Bibb or butter lettuce leaves.
                 1 pound lean chopped salmon.
                 1 tablespoon cooking oil.
-                1 large onion, chopped.
+                1 large onion, chopped.<span id="dots3"+br>...</span><span style="display : none"id="more3">
                 ¼ cup hoisin sauce.
                 2 cloves fresh garlic, minced.
                 1 tablespoon soy sauce.
-                1 tablespoon rice wine vinegar.</p>
-              <a href = "#">Read More</a>
+                1 tablespoon rice wine vinegar.</span></p>
+                <button onclick="myFunction(3)" id="myBtn3">Read more</button>
             </div>
           </div>
           <!-- end of item -->
@@ -205,7 +214,7 @@
           <div class = "blog-item">
             <div class = "blog-img">
               <img src = "food5.jpg" alt = "">
-              <span><i class = "far fa-heart"></i></span>
+              <span onclick="Like(8)"><i class = "far fa-heart"></i> <strong id="like8">0</strong></span>
             </div>
             <div class = "blog-text">
               <span>10 October, 2021</span>
@@ -213,13 +222,13 @@
               <p>Ingredients
                 1/2 filet salmon cooked, about 2 ounces.
                 1 cup cooked rice.
-                1 ice cube.
+                1 ice cube.<span id="dots4"+br>...</span><span style="display : none" id="more4">
                 1 tbsp soy sauce or to taste.
                 1 tbsp kewpie mayo or to taste, sub regular mayo if needed.
                 1 tsp sriracha or to taste, optional.
                 1/2 avocado sliced or diced, optional.
-                1/4 cup kimchi optional.</p>
-              <a href = "#">Read More</a>
+                1/4 cup kimchi optional.</span></p>
+                <button onclick="myFunction(4)" id="myBtn4">Read more</button>
             </div>
           </div>
           <!-- end of item -->
@@ -227,7 +236,7 @@
           <div class = "blog-item">
             <div class = "blog-img">
               <img src = "food61.jpg" alt = "">
-              <span><i class = "far fa-heart"></i></span>
+              <span onclick="Like(9)"><i class = "far fa-heart"></i> <strong id="like9">0</strong></span>
             </div>
             <div class = "blog-text">
               <span>15 October, 2021</span>
@@ -235,13 +244,13 @@
               <p>Canned salmon – boneless and skinless canned salmon. ...
                 Mayonnaise – I recommend an avocado oil mayo or homemade. ...
                 Avocado- chopped
-                Cucumber- chopped
+                Cucumber- chopped<span id="dots5"+br>...</span><span style="display : none" id="more5">
                 Celery – adds a nice crunch. ...
                 Onion – any kind of onion will work. ...
                 Dill – fresh or dried.
                 Red pepper.
-                Lemon juice – optional but recommended.</p>
-              <a href = "#">Read More</a>
+                Lemon juice – optional but recommended.</span></p>
+                <button onclick="myFunction(5)" id="myBtn5">Read more</button>
             </div>
           </div>
           <!-- end of item -->
@@ -249,7 +258,7 @@
           <div class = "blog-item">
             <div class = "blog-img">
               <img src = "food71.jpg" alt = "">
-              <span><i class = "far fa-heart"></i></span>
+              <span onclick="Like(10)"><i class = "far fa-heart"></i> <strong id="like10">0</strong></span>
             </div>
             <div class = "blog-text">
               <span>20 October, 2021</span>
@@ -259,11 +268,11 @@
                 1 pound shrimp, peeled and deveined.
                 salt to taste.
                 6 cloves garlic, finely minced.
-                ¼ teaspoon red pepper flakes.
+                ¼ teaspoon red pepper flakes.<span id="dots6"+br>...</span><span style="display : none" id="more6">
                 3 tablespoons lemon juice.
                 1 tablespoon caper brine.
-                1 ½ teaspoons cold butter.</p>
-              <a href = "#">Read More</a>
+                1 ½ teaspoons cold butter.</span></p>
+                <button onclick="myFunction(6)" id="myBtn6">Read more</button>
             </div>
           </div>
           <!-- end of item -->
